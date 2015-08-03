@@ -1,13 +1,16 @@
 /* Overarching body style*/
-	body {
-		height:calc(100%);
-		background-color: pink;
-		background-size: cover;
-	}
-
 	html {
 		height: 100%;
-		width: 100%;
+	}
+
+	body {
+		background-color: grey;
+		height: 100%;
+	}
+
+	body span {
+		position: relative;
+		left: 15%;
 	}
 
 /* Navbar styling */
@@ -20,7 +23,7 @@
 		padding-top: .5em;
 	}
 
-	.col-xs-12:nth-child(1) span{
+	.icons {
 		color: white;
 		font-size: 1.6em;
 		display: inline-block;
@@ -31,16 +34,47 @@
 	    left: 20%;
 	}
 
+	#tagline {
+		display: inline-block;
+		margin-top: 0;
+		padding-left: 4%;
+	}
 
-#tagline {
-	display: inline-block;
-}
+	#nameHolder h1 {
+		margin-bottom: 0;
+	}
+
+
 /* About Me Styling */
+	/* About picture */
+	#aboutPicture {
+		float: left;
+		display: inline-block;
+		height: calc(100%-60%);
+		width: 45%;
+	}
+
 	/* number removal */
 	#contactMeList {
 		list-style: none;
 		padding-left: 0;
 	}
+	
+		/* Media query for smaller screens, remove picture */
+		@media (max-width: 700px) { 
+				#aboutPicture {
+					display: none;
+				}
+
+				.col-xs-1 {
+					display: none;
+					}
+				body {
+					margin: 0;
+					border: 0;
+					padding: 0;
+				}
+		}
 
 /* Project Styling Section */
 	.projectImages {
@@ -54,7 +88,6 @@
 	.col-xs-1 {
 		background: red;
 	    height: 100%;
-	    width: 100%;
 	}
 
 		.col-xs-1:nth-child(1) {
