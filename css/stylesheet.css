@@ -1,0 +1,72 @@
+/* Overarching body style*/
+	body {
+		height:calc(100%);
+		background-color: pink;
+		background-size: cover;
+	}
+
+	html {
+		height: 100%;
+		width: 100%;
+	}
+
+/* Navbar styling */
+	#navigation {
+		background-color: orange;
+		width: 100%;
+		margin: 0;
+		z-index: 2;
+		border-radius: 0;
+		padding-top: .5em;
+	}
+
+	.col-xs-12:nth-child(1) span{
+		color: white;
+		font-size: 1.6em;
+		display: inline-block;
+	    margin-left: auto;
+	    margin-right: auto;
+	    width: 7em;
+	    position: relative;
+	    left: 20%;
+	}
+
+
+#tagline {
+	display: inline-block;
+}
+/* About Me Styling */
+	/* number removal */
+	#contactMeList {
+		list-style: none;
+		padding-left: 0;
+	}
+
+/* Project Styling Section */
+	.projectImages {
+		height: 10%;
+		width: 30%;
+		border: .3em solid #6E3B2F;
+		border-radius: .5em;
+	}
+
+/* Bars on either side */
+	.col-xs-1 {
+		background: red;
+	    height: 100%;
+	    width: 100%;
+	}
+
+		.col-xs-1:nth-child(1) {
+			float: left;
+		}
+
+		.col-xs-1:nth-child(2) {
+			float: right;
+		}
+
+/* body content. All starts out hidden save for about information */
+
+span .col-xs-6 {
+	display: hidden;
+}
