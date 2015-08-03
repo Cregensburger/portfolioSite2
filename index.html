@@ -19,8 +19,9 @@
 
 	</head>
 	<body>
-		
-
+		<!-- actual header sections, broken up into three rows: 
+		my name, tagline and the navigation. Should stack cleanly
+		when window size shrinks. -->
 		<div class="row" id="navigation">
 			<div class="col-xs-10" id="nameHolder">
 				<h1>Courtney Regensburger</h1>
@@ -28,6 +29,8 @@
 			<div class="col-xs-10" id="tagline">
 				<h4>From curd to code</h4>
 			</div>
+
+			<!-- display icons in the header -->
 			<div class="col-xs-12">
 				<span class="icons">
 					<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
@@ -54,12 +57,17 @@
 				</span>
 			</div>
 		</div>
+
 		<!-- left side bar, two columns wide -->
 		<span id="leftSide" class="col-xs-1"></span>
 
 		<!-- right side bar, two columns wide -->
 		<span id="rightSide" class="col-xs-1"></span>
 	
+		<!-- The page content. Theoretically, it should show the About
+		information by default, but on click reveal other elements, replacing
+		whatever was in that spot. -->
+		<!-- Left side white space div -->
 		<div class="col-xs-2"></div>
 			<span id="about" class="col-xs-6">
 				<h3 id="aboutMeHeader" class="headLead">About</h3>
@@ -76,7 +84,7 @@
 					</ol>
 			</span>
 
-			<span id="projects" class="col-xs-6">
+			<span id="projects" class="col-xs-6" style="display:none;">
 				<h3 class="headLead">General Assembly Projects</h3>
 					<p> General Assembly is an educational institute that offers full-time immersive programs, including such courses as: web development, user experience design, and digital marketing. I attended the Web Development Immersive, a three month long bootcamp dedicated to teaching non-programmers a general full-stack set of skills.
 					<p> While attending WDI, I have learned about a number of tools, including: programming fundamentals, product development, front-end web development and back-end web development.</p>
@@ -113,7 +121,7 @@
 					</div>
 			</span>
 
-			<span id="workExperience" class="col-xs-6">
+			<span id="workExperience" class="col-xs-6" style="display:none;">
 				<h3 class="headLead">Work Experience</h3>
 					<p><b>Jungle Jim's</b> - Cheesemonger</p>
 						<p> February 2014 - April 2015 </p>
@@ -132,7 +140,7 @@
 						<p> Developed strong organization, prioritization, and time management skills. Highly skilled in the use of Microsoft Office 2007 and utilizing various search engines.</p>
 			</span>
 
-			<span id="travel" class="col-xs-6">
+			<span id="travel" class="col-xs-6" style="display:none;">
 				<h3  class="headLead">International Travel</h3>
 				<p><b>Italy</b> - Study Abroad</p>
 					<p>June 2011 - July 2011, Florence, Italy </p>
@@ -145,10 +153,11 @@
 					<p>After graduating from University, I returned to Frankfurt, Germany. While there, I made a number of contacts with the European Nintendo Localization Division. I also traveled throughout Germany and Belgium.</p>
 			</span>
 
-			<span id="doodles" class="col-xs-6">
+			<span id="doodles" class="col-xs-6" style="display:none;">
 				<h3  class="headLead">Doodles!</h3>
 					<p>placeholder for dose doodles</p>	
 			</span>
+		<!-- Right side white space div -->
 		<div class="col-xs-2"></div>
 	</body>
 	<script type="text/javascript">
