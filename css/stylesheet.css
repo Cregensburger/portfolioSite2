@@ -1,27 +1,51 @@
 /* Overarching body style*/
-	body {
-		height:calc(100%);
-		background-color: pink;
-		background-size: cover;
-	}
-
 	html {
 		height: 100%;
-		width: 100%;
 	}
+
+	body {
+		background-color: #D4DACC;
+		height: 100%;
+		color: #898E81;
+	}
+
+	.col-xs-8 {
+		max-width: 80%;
+	}
+	
+	/* Bars on either side */
+		.col-xs-1 {
+			background: #F4F7EF;
+		    height: 100%;
+		}
+
+			.col-xs-1:nth-child(1) {
+				float: left;
+			}
+
+			.col-xs-1:nth-child(2) {
+				float: right;
+			}
+
+	/* body content. All starts out hidden save for about information */
+		span .col-xs-6 {
+			display: hidden;
+		}
+
 
 /* Navbar styling */
 	#navigation {
-		background-color: orange;
+		background-color: #10ACBA;
 		width: 100%;
 		margin: 0;
 		z-index: 2;
 		border-radius: 0;
 		padding-top: .5em;
+		color: #F4F7EF;
 	}
 
-	.col-xs-12:nth-child(1) span{
-		color: white;
+	.icons {
+		color: #F4F7EF;
 		font-size: 1.6em;
 		display: inline-block;
 	    margin-left: auto;
@@ -31,42 +55,88 @@
 	    left: 20%;
 	}
 
+	#tagline {
+		display: inline-block;
+		margin-top: 0;
+		padding-left: 4%;
+	}
 
-#tagline {
-	display: inline-block;
-}
+	#nameHolder h1 {
+		margin-bottom: 0;
+	}
+
+
 /* About Me Styling */
+	/* About picture */
+	#aboutPicture {
+		float: left;
+		display: inline-block;
+		height: calc(100%-60%);
+		width: 45%;
+	}
+
 	/* number removal */
 	#contactMeList {
 		list-style: none;
 		padding-left: 0;
 	}
 
+		#contactMeList a {
+			text-decoration: underline;
+			color: #898E81;
+		}
+	
+
 /* Project Styling Section */
+	#projects {
+		padding-right: 20%;
+	}
+
 	.projectImages {
-		height: 10%;
-		width: 30%;
-		border: .3em solid #6E3B2F;
-		border-radius: .5em;
+		height: 30%;
+		width: 50%;
+		margin: 0 auto;
+    	padding-top: 2em;
 	}
 
-/* Bars on either side */
-	.col-xs-1 {
-		background: red;
-	    height: 100%;
-	    width: 100%;
+	.carousel-caption {
+		position: relative;
+		max-width: 60%;
 	}
 
-		.col-xs-1:nth-child(1) {
-			float: left;
+	.carousel-caption a {
+		text-decoration: underline;
+		color: white;
+	}
+
+	.carousel-control {
+		top: 30%;
+		border-radius: 1em;
+		height: 3em;
+		width: 3em;
+	}
+
+	.carousel-indicators {
+		position: relative;
+		bottom: 5%;
+	}
+
+
+/* Media query for smaller screens, remove picture */
+@media (max-width: 700px) { 
+		#aboutPicture {
+			display: none;
 		}
 
-		.col-xs-1:nth-child(2) {
-			float: right;
+		.col-xs-1 {
+			display: none;
 		}
 
-/* body content. All starts out hidden save for about information */
 
-span .col-xs-6 {
-	display: hidden;
+		body {
+			margin-left: auto;
+	    	margin-right: auto;
+			border: 0;
+			padding: 0;
+		}
 }

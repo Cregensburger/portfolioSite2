@@ -4,9 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>C. Regensburger Portfolio</title>
-		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<!-- Bootstrap linking -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!--Carousel link-->
+ 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<!-- jQuery shenanigans -->
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -17,111 +20,139 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<link rel="stylesheet" href="css/normalize.css">
 
+		<!-- My custom stylesheet -->
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 	</head>
-	<body>
 		<!-- actual header sections, broken up into three rows: 
 		my name, tagline and the navigation. Should stack cleanly
 		when window size shrinks. -->
 		<div class="row" id="navigation">
-			<div class="col-xs-10" id="nameHolder">
+			<div class="col-xs-10" id="nameHolder" class="navText">
 				<h1>Courtney Regensburger</h1>
 			</div>
-			<div class="col-xs-10" id="tagline">
+			<div class="col-xs-10" id="tagline" lass="navText">
 				<h4>From curd to code</h4>
 			</div>
 
 			<!-- display icons in the header -->
-			<div class="col-xs-12">
-				<span class="icons">
-					<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
-				</span>
+			<div class="col-xs-12" id="navBar">
+				<div class="icons">
+					<div class="glyphicon glyphicon-phone" aria-hidden="true"></div>
+				</div>
 
-				<span class="icons" onclick="toggle_visibility('about');">
-					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-				</span>
+				<div class="icons" onclick="toggle_visibility('about');">
+					<div class="glyphicon glyphicon-user" aria-hidden="true"></div>
+				</div>
 
-				<span class="icons" onclick="toggle_visibility('projects');">
-					<span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
-				</span>
+				<div class="icons" onclick="toggle_visibility('projects');">
+					<div class="glyphicon glyphicon-blackboard" aria-hidden="true"></div>
+				</div>
 				
-				<span class="icons" onclick="toggle_visibility('workExperience');">
-					<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
-				</span>
+				<div class="icons" onclick="toggle_visibility('workExperience');">
+					<div class="glyphicon glyphicon-briefcase" aria-hidden="true"></div>
+				</div>
 				
-				<span class="icons" onclick="toggle_visibility('travel');">
-					<span class="glyphicon glyphicon-plane" aria-hidden="true"></span>
-				</span>
+				<div class="icons" onclick="toggle_visibility('travel');">
+					<div class="glyphicon glyphicon-plane" aria-hidden="true"></div>
+				</div>
 				
-				<span class="icons" onclick="toggle_visibility('doodles');">
-					<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-				</span>
+				<div class="icons" onclick="toggle_visibility('doodles');">
+					<div class="glyphicon glyphicon-pencil" aria-hidden="true"></div>
+				</div>
 			</div>
 		</div>
 
-		<!-- left side bar, two columns wide -->
-		<span id="leftSide" class="col-xs-1"></span>
+	<body>		
 
-		<!-- right side bar, two columns wide -->
-		<span id="rightSide" class="col-xs-1"></span>
-	
-		<!-- The page content. Theoretically, it should show the About
-		information by default, but on click reveal other elements, replacing
-		whatever was in that spot. -->
-		<!-- Left side white space div -->
-		<div class="col-xs-2"></div>
-			<span id="about" class="col-xs-6">
-				<h3 id="aboutMeHeader" class="headLead">About</h3>
-					<p>Over the past three months, I have attended the programming bootcamp, General Assembly. In that time, I have learned a full-stack set of skills and utilized them on various projects. My first project, Tic Tac Toe, represents a key point in my development as a programmer. It was here that I began to learn effective planning, including wireframes and pseudo-coding, and how to implement unknown tools. </p>
+		<!-- right side bar, one column wide -->
+		<div id="rightSide" class="col-xs-1"></div>
 
-					<p>Another project, App-Etite, expanded upon that foundation. I learned how to code and plan with other people. This was a Rails application that allowed people to sign up and then post where they wanted to go to lunch and vote on entries. We implemented a number of new technologies, such as: Rails, Bootstrap and Decrypt. I have a strong interest in games and front-end design. As such, I have been trying to sharpen my skills by teaching myself how to use Unity, supplementing in-class lessons with courses on Code Academy and working on a number of side projects.</p>
+		<!-- left side bar, one column wide -->
+		<div id="leftSide" class="col-xs-1"></div>
+		
+		<span id="bodyContent">
 
-					<ol id="contactMeList">
-						<li><p><b> Courtney Regensburger</b> </p></li>
-						<li><p><b> Email:</b>  courtneyregensburger@yahoo.com</p></li>
-						<li><p><b> Phone:</b>  (513) 368-2670 </p></li>
-						<li><p><b> Linked In:</b>  <a href="https://www.linkedin.com/pub/courtney-regensburger/7a/a00/55"> Click me!</a></p></li>
-						<li><p><b> Github link:</b> <a href="https://github.com/Cregensburger">Cregensburger</a></p></li>
-					</ol>
+			<!-- The page content. Theoretically, it should show the About information by default, but on click reveal other elements, replacing whatever was in that position. Overall, a static page with no additional functionality (yet). -->
+			<span id="about" class="col-xs-8">
+				<img src="css/images/renfest2.png" id="aboutPicture" class="col-xs-6">
+					<div id="aboutContent" class="col-xs-6">
+						<h3 id="aboutMeHeader">About</h3>
+						<p>Over the past three months, I have attended the programming bootcamp, General Assembly. In that time, I have learned a full-stack set of skills and utilized them on various projects. My first project, Tic Tac Toe, represents a key point in my development as a programmer. It was here that I began to learn effective planning, including wireframes and pseudo-coding, and how to implement unknown tools. </p>
+						<p>Another project, App-Etite, expanded upon that foundation. I learned how to code and plan with other people. This was a Rails application that allowed people to sign up and then post where they wanted to go to lunch and vote on entries. We implemented a number of new technologies, such as: Rails, Bootstrap and Decrypt. I have a strong interest in games and front-end design. As such, I have been trying to sharpen my skills by teaching myself how to use Unity, supplementing in-class lessons with courses on Code Academy and working on a number of side projects.</p>
+						<ol id="contactMeList">
+							<li><p><b> Email:</b>  courtneyregensburger@yahoo.com</p></li>
+							<li><p><b> Phone:</b>  (513) 368-2670 </p></li>
+							<li><p><b> Linked In:</b>  <a href="https://www.linkedin.com/pub/courtney-regensburger/7a/a00/55"> Click me!</a></p></li>
+							<li><p><b> Github link:</b> <a href="https://github.com/Cregensburger">Cregensburger</a></p></li>
+						</ol>
+					</div>
 			</span>
 
-			<span id="projects" class="col-xs-6" style="display:none;">
+			<!-- Carousel, not automatic, onclick expands the picture. An entry below talks about the project. This includes links and needed information. When changed to a new project, it will fade-out old information and fade-in new information. -->
+			<span id="projects" class="col-xs-8" style="display:none;">
 				<h3 class="headLead">General Assembly Projects</h3>
 					<p> General Assembly is an educational institute that offers full-time immersive programs, including such courses as: web development, user experience design, and digital marketing. I attended the Web Development Immersive, a three month long bootcamp dedicated to teaching non-programmers a general full-stack set of skills.
 					<p> While attending WDI, I have learned about a number of tools, including: programming fundamentals, product development, front-end web development and back-end web development.</p>
 					<p> Below are just a few examples of the work I have done while attending GA. </p>
 
-					<div class="projectTab" id="tictactoe">
-						<p><b><strong>Tic Tac Toe</b></strong></p>
-						<img id="tictactoeScreenshot" class="projectImages" src="css/images/tictactoeScreenshot.jpg" alt="Tic Tac Toe screenshot">
-						<p class="projectText"> My first project made for General Assembly. Given four days, we were to create a fully functional tic tac toe app. As it was a solo project, I wrote all of the code. In this project, I implemented Skeleton as a styling tool, which was something I had never used before. </p>
+					<div id="projectCarousel" class="carousel slide" data-ride="carousel">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+					    <li data-target="#projectCarousel" data-slide-to="0" class="active"></li>
+					    <li data-target="#projectCarousel" data-slide-to="1"></li>
+					    <li data-target="#projectCarousel" data-slide-to="2"></li>
+					  </ol>
 
-						<a href="https://github.com/Cregensburger/tic-tac-toe" class="projectBlurb">Github Link </a> - 
-						<a href="http://guard-kangaroo-36074.bitballoon.com/" class="projectBlurb">Application Link</a>
-					</div>
-				
+					  <!-- Wrapper for slides -->
+					  <!-- Tic Tac Toe slide view -->
+					  <div class="carousel-inner" role="listbox">
+					    <div class="item active">
+					      <img id="tictactoeScreenshot" class="projectImages" src="css/images/tictactoeScreenshot.jpg" alt="Tic Tac Toe screenshot">
+							<div class="carousel-caption">
+								<div> My first project made for General Assembly. Given four days, we were to create a fully functional tic tac toe app. As it was a solo project, I wrote all of the code. In this project, I implemented Skeleton as a styling tool, which was something I had never used before.</div>
+								<a href="https://github.com/Cregensburger/tic-tac-toe" class="projectBlurb">Github Link </a> - 
+								<a href="http://guard-kangaroo-36074.bitballoon.com/" class="projectBlurb">Application Link</a>
+							</div>
+					    </div>
 
-					<div class="projectTab" id="appetite">
-						<p><b><strong>App-Etite</b></strong></p>
-						<img id="appetiteScreenshot" class="projectImages" src="css/images/app-etiteScreenshot.jpg" alt="App-Etite screenshot">
-						<p class="projectText"> Allowed to come up with our own idea for an application, we opted to make a Rails app that allowed people to post where they wanted to go to lunch and vote. Using such tools as Decrypt and Bootstrap, we were able to implement a new number of features into it. </p>
+					    <!-- App-Etite slide view -->
+					    <div class="item">
+					      <img id="appetiteScreenshot" class="projectImages" src="css/images/app-etiteScreenshot.jpg" alt="App-Etite screenshot">
+						    <div class="carousel-caption">
+								<div> Our group was allowed to come up with our own idea for an application. As such, we opted to make a Rails app that allowed people to post where they wanted to go to lunch and vote. Using such tools as Decrypt and Bootstrap, we were able to implement a new number of features into it. </div>
+								<a class="projectBlurb" href="https://github.com/James527/app-etite">Github Link</a> - 
+								<a class="projectBlurb" href="https://limitless-lake-1270.herokuapp.com/">Application Link</a>
+						    </div>
+					    </div>
 
-						<a class="projectBlurb" href="https://github.com/James527/app-etite">Github Link</a> - 
-						<a class="projectBlurb" href="https://limitless-lake-1270.herokuapp.com/">Application Link</a>
-					</div>
-				
-			
+					    <!-- Hangman slide view -->
+					    <div class="item">
+					      <img id="hangmanScreenshot" class="projectImages" src="css/images/hangmanScreenshot.jpg" alt="Hangman screenshot">
+					    	<div class="carousel-caption">
+					    		<p> Provided with the CSS and HTML, my partner and I were given eight hours to code a functioning Hangman game application. We succeeded, mostly using JavaScript.</p>
 
-					<div class="projectTab" id="hangman">
-						<p><b><strong>Hangman</strong></b></p>
-						<img id="hangmanScreenshot" class="projectImages" src="css/images/hangmanScreenshot.jpg" alt="Hangman screenshot">
-						<p class="projectText"> Provided with the CSS and HTML, my partner and I were given eight hours to code a functioning Hangman game application. We succeeded, mostly using JavaScript.</p>
+				       			<a class="projectBlurb" href="https://github.com/Cregensburger/hangmanProject">Github Link</a> -
+				       			<a class="projectBlurb" href="http://movie-title-hangman.bitballoon.com/">Application Link</a>
+					    	</div>
+					    </div>
+					  </div>
 
-						<a class="projectBlurb" href="https://github.com/Cregensburger/hangmanProject">Github Link</a> -
-						<a class="projectBlurb" href="http://movie-title-hangman.bitballoon.com/">Application Link</a>
+					<!-- Left and right controls -->
+				        <a class="left carousel-control" href="#projectCarousel" role="button" data-slide="prev" id="arrowLeft">
+				          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				          <span class="sr-only">Previous</span>
+				        </a>
+
+				        <a class="right carousel-control" href="#projectCarousel" role="button" data-slide="next" id="arrowRight">
+				          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				          <span class="sr-only">Next</span>
+				        </a>
 					</div>
 			</span>
 
-			<span id="workExperience" class="col-xs-6" style="display:none;">
+			<!-- Show icons/pictures that relate to each
+			job. Onlick, 3D rotate to other side, revealing the needed information (such as: company, my title, dates, location and short entry on my time there and any skills learned) -->
+			<span id="workExperience" class="col-xs-8" style="display:none;">
 				<h3 class="headLead">Work Experience</h3>
 					<p><b>Jungle Jim's</b> - Cheesemonger</p>
 						<p> February 2014 - April 2015 </p>
@@ -140,7 +171,8 @@
 						<p> Developed strong organization, prioritization, and time management skills. Highly skilled in the use of Microsoft Office 2007 and utilizing various search engines.</p>
 			</span>
 
-			<span id="travel" class="col-xs-6" style="display:none;">
+			<!-- Two sections(Italy and Germany). Each one will have a selection of pictures that rotate automatically with a short blurb under each carousel -->
+			<span id="travel" class="col-xs-8" style="display:none;">
 				<h3  class="headLead">International Travel</h3>
 				<p><b>Italy</b> - Study Abroad</p>
 					<p>June 2011 - July 2011, Florence, Italy </p>
@@ -153,12 +185,12 @@
 					<p>After graduating from University, I returned to Frankfurt, Germany. While there, I made a number of contacts with the European Nintendo Localization Division. I also traveled throughout Germany and Belgium.</p>
 			</span>
 
-			<span id="doodles" class="col-xs-6" style="display:none;">
+			<!-- Doodle section, eventually it will have a carousel (automatic movement) where the pictures upon click will expand (lightbox) -->
+			<span id="doodles" class="col-xs-8" style="display:none;">
 				<h3  class="headLead">Doodles!</h3>
 					<p>placeholder for dose doodles</p>	
 			</span>
-		<!-- Right side white space div -->
-		<div class="col-xs-2"></div>
+		</span>
 	</body>
 	<script type="text/javascript">
 	    function toggle_visibility(id) {
