@@ -11,8 +11,7 @@
 		<!--Carousel link-->
  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<!-- jQuery shenanigans -->
-		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -27,36 +26,34 @@
 		my name, tagline and the navigation. Should stack cleanly
 		when window size shrinks. -->
 		<div class="row" id="navigation">
-			<div class="col-xs-10" id="nameHolder" class="navText">
-				<h1>Courtney Regensburger</h1>
-			</div>
-			<div class="col-xs-10" id="tagline" lass="navText">
-				<h4>From curd to code</h4>
+			<div class="col-xs-8" id="headerTextContainer">
+				<div id="nameHolder" class="navText">
+					<h1>Courtney Regensburger</h1>
+				</div>
+				<div id="tagline" lass="navText">
+					<h4>From curd to code</h4>
+				</div>
 			</div>
 
 			<!-- display icons in the header -->
-			<div class="col-xs-12" id="navBar">
-				<div class="icons">
-					<div class="glyphicon glyphicon-phone" aria-hidden="true"></div>
-				</div>
-
-				<div class="icons" onclick="toggle_visibility('about');">
+			<div class="col-xs-4" id="navBarIcons">
+				<div id="aboutIcon" class="icons" onclick="toggle_visibility('about');">
 					<div class="glyphicon glyphicon-user" aria-hidden="true"></div>
 				</div>
 
-				<div class="icons" onclick="toggle_visibility('projects');">
+				<div id="projectsIcon" class="icons" onclick="toggle_visibility('projects');">
 					<div class="glyphicon glyphicon-blackboard" aria-hidden="true"></div>
 				</div>
 				
-				<div class="icons" onclick="toggle_visibility('workExperience');">
+				<div id="experienceIcon" class="icons" onclick="toggle_visibility('workExperience');">
 					<div class="glyphicon glyphicon-briefcase" aria-hidden="true"></div>
 				</div>
 				
-				<div class="icons" onclick="toggle_visibility('travel');">
+				<div id="travelIcon" class="icons" onclick="toggle_visibility('travel');" value="travel">
 					<div class="glyphicon glyphicon-plane" aria-hidden="true"></div>
 				</div>
 				
-				<div class="icons" onclick="toggle_visibility('doodles');">
+				<div id="doodleIcon" class="icons" onclick="toggle_visibility('doodles');">
 					<div class="glyphicon glyphicon-pencil" aria-hidden="true"></div>
 				</div>
 			</div>
@@ -74,8 +71,8 @@
 
 			<!-- The page content. Theoretically, it should show the About information by default, but on click reveal other elements, replacing whatever was in that position. Overall, a static page with no additional functionality (yet). -->
 			<span id="about" class="col-xs-8">
-				<img src="css/images/renfest2.png" id="aboutPicture" class="col-xs-6">
-					<div id="aboutContent" class="col-xs-6">
+				<img src="css/images/renfest2.png" id="aboutPicture">
+					<div id="aboutContent">
 						<h3 id="aboutMeHeader">About</h3>
 						<p>Over the past three months, I have attended the programming bootcamp, General Assembly. In that time, I have learned a full-stack set of skills and utilized them on various projects. My first project, Tic Tac Toe, represents a key point in my development as a programmer. It was here that I began to learn effective planning, including wireframes and pseudo-coding, and how to implement unknown tools. </p>
 						<p>Another project, App-Etite, expanded upon that foundation. I learned how to code and plan with other people. This was a Rails application that allowed people to sign up and then post where they wanted to go to lunch and vote on entries. We implemented a number of new technologies, such as: Rails, Bootstrap and Decrypt. I have a strong interest in games and front-end design. As such, I have been trying to sharpen my skills by teaching myself how to use Unity, supplementing in-class lessons with courses on Code Academy and working on a number of side projects.</p>
@@ -193,12 +190,13 @@
 		</span>
 	</body>
 	<script type="text/javascript">
-	    function toggle_visibility(id) {
+		function toggle_visibility(id) {
 	       var e = document.getElementById(id);
 	       if(e.style.display == 'block')
 	          e.style.display = 'none';
 	       else
 	          e.style.display = 'block';
 	    }
+
 </script>
 </html>
