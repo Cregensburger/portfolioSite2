@@ -6,7 +6,7 @@
 	body {
 		background-color: #D4DACC;
 		height: 100%;
-		color: #898E81;
+		color: rgba(98,103,92, 1);
 	}
 
 	.col-xs-8 {
@@ -27,33 +27,36 @@
 				float: right;
 			}
 
-	/* body content. All starts out hidden save for about information */
-		span .col-xs-6 {
-			display: hidden;
-		}
 
 
 /* Navbar styling */
 	#navigation {
-		background-color: #10ACBA;
-		width: 100%;
+		background-color: #10acba;
+		border-bottom: .3em solid #ba7310;
 		margin: 0;
 		z-index: 2;
 		border-radius: 0;
-		padding-top: .5em;
+		padding-top: .2em;
 		color: #F4F7EF;
 	}
 
-	.icons {
-		color: #F4F7EF;
-		font-size: 1.6em;
+
+	#navBarIcons {
 		display: inline-block;
-	    margin-left: auto;
-	    margin-right: auto;
-	    width: 7em;
-	    position: relative;
-	    left: 20%;
+		position: relative;
+		bottom: 1.5em;
+		right: 4em;
 	}
+		.icons {
+			color: #F4F7EF;
+			cursor: pointer;
+			list-style: none;
+			font-size: 1.6em;
+			display: inline;
+		    padding: 5%;
+		    position: relative;
+		    top: 2em;
+		}
 
 	#tagline {
 		display: inline-block;
@@ -65,6 +68,10 @@
 		margin-bottom: 0;
 	}
 
+	#headerTextContainer {
+		float: left;
+		display: inline-block;
+	}
 
 /* About Me Styling */
 	/* About picture */
@@ -83,13 +90,13 @@
 
 		#contactMeList a {
 			text-decoration: underline;
-			color: #898E81;
+			color: rgba(98,103,92, 1);
 		}
 	
 
 /* Project Styling Section */
-	#projects {
-		padding-right: 20%;
+	#projects, #workExperience, #travel, #doodles {
+		padding-left: 20%;
 	}
 
 	.projectImages {
