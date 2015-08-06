@@ -47,6 +47,16 @@
 		bottom: 1.5em;
 		right: 4em;
 	}
+	
+		button {
+			border: none;
+			background-color: rgba( 0, 0, 0, 0);
+		} 
+
+		button:focus {
+			outline: none;
+		}
+
 		.icons {
 			color: #F4F7EF;
 			cursor: pointer;
@@ -108,7 +118,14 @@
 
 	.carousel-caption {
 		position: relative;
+		top: 1em;
 		max-width: 60%;
+		border-radius: .5em;
+		background-color: #10acba;
+		z-index: -1;
+		border: 1px solid black;
+		padding-left: .5em;
+		padding-right: .5em;
 	}
 
 	.carousel-caption a {
