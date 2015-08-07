@@ -1,6 +1,7 @@
 /* Overarching body style*/
 	html {
 		height: 100%;
+		overflow: visible;
 	}
 
 	body {
@@ -17,6 +18,7 @@
 		.col-xs-1 {
 			background: #F4F7EF;
 		    height: 100%;
+
 		}
 
 			.col-xs-1:nth-child(1) {
@@ -65,7 +67,7 @@
 			display: inline;
 		    padding: 5%;
 		    position: relative;
-		    top: 2em;
+		    top: 1em;
 		}
 
 	#tagline {
@@ -145,17 +147,136 @@
 		bottom: 5%;
 	}
 
+/* Work Experience Styling */
+	#jungleAnimateWrap, #woodAnimateWrap, 
+	#krogerAnimateWrap, #universityAnimateWrap {
+		background-color: #10acba;
+		color: white;
+		max-width: 50%;
+		max-height: 50%; 
+		padding: 1em;
+/*		border-radius: 50%;	
+*/		margin: 1em;
+		border: 0;
+		/* How pronounced should the 3D effects be */
+			perspective: 800px;
+			-webkit-perspective: 800px;
+	}
+
+		#jungleIconHolder, #woodIconHolder, 
+		#krogerIconHolder, #universityIconHolder {
+			color: white;
+			max-width: 75%;
+			max-height: 50%;
+			border-radius: 50%;
+			background-color: #10acba;
+			padding: .2em;
+			font-size: 800%;
+			position: absolute;
+			left: 30%;
+			bottom: 50%;
+		}
+			#jungleIconHolder, #universityIconHolder {
+				font-size: 1000%;
+				position: absolute;
+				top: 15%;
+			}
+			#jungleIconHolder, #jungleBack, 
+			#woodIconHolder, #woodBack, 
+			#krogerIconHolder, #krogerBack,
+			#universityIconHolder, #universityBack {
+
+
+				/* Enable 3D transforms */
+					transform-style: preserve-3d;
+					-webkit-transform-style: preserve-3d;
+
+				/* We are using two separate divs for the front and back of the
+				   phone. This will hide the divs when they are flipped, so that the
+				   opposite side can be seen:  */
+					backface-visibility: hidden;
+					-webkit-backface-visibility: hidden;
+
+				/* Animate the transitions */
+					transition:0.8s;
+			}
+
+			#jungleBack, #woodBack, #krogerBack, #universityBack {
+				/* The back side is flipped 180 deg by default */
+				transform:rotateY(180deg);
+				-webkit-transform:rotateY(180deg);
+
+				background-position:right center;
+			}
+
+			#jungleAnimateWrap:hover #jungleIconHolder, 
+			#woodAnimateWrap:hover #woodIconHolder, 
+			#krogerAnimateWrap:hover #krogerIconHolder, 
+			#universityAnimateWrap:hover #universityIconHolder {
+				/* When the container is hovered, flip the front side and hide it .. */
+				transform:rotateY(180deg);
+				-webkit-transform:rotateY(180deg);
+			}
+
+			#jungleAnimateWrap:hover #jungleBack, 
+			#woodAnimateWrap:hover #woodBack, 
+			#krogerAnimateWrap:hover #krogerBack, 
+			#universityAnimateWrap:hover #universityBack {
+				/* .. at the same time flip the back side into visibility */
+				transform:rotateY(360deg);
+				-webkit-transform:rotateY(360deg);
+			}
+
+
+	.workContainer h3, .workContainer p {
+		font-size: 75%;
+		width: 50%;  
+   		word-wrap: break-word;      /* IE */
+   		position: relative;
+   		left: 30%;
+	}
+
+
 
 /* Media query for smaller screens, remove picture */
 @media (max-width: 700px) { 
-		#aboutPicture {
+	/* remove the about-me picture and white border for phone view*/
+		#aboutPicture, .col-xs-1 {
 			display: none;
 		}
 
-		.col-xs-1 {
-			display: none;
+		.workContainer {
+			border-radius: 0;
+			width: calc(100%-10%);
+			height: 10%;
 		}
+			#jungleIconHolder, #woodIconHolder, 
+			#krogerIconHolder, #universityIconHolder {
+				color: white;
+				max-width: 75%;
+				max-height: 50%;
+				border-radius: 50%;
+				background-color: #10acba;
+				padding: .2em;
+				font-size: 200%;
+				position: absolute;
+				left: 20%;
+				bottom: 50%;
+			}
 
+			#university {
+				position: relative;
+				left: 0%;
+			}
+
+			#woodLamping {
+			 	position: relative;
+			 	left: 0%;
+			 }
+
+			.workContainer h3, .workContainer p {
+				width: calc(100%-10%);
+			}
 
 		body {
 			margin-left: auto;
