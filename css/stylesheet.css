@@ -155,8 +155,7 @@
 		max-width: 50%;
 		max-height: 50%; 
 		padding: 1em;
-/*		border-radius: 50%;	
-*/		margin: 1em;
+		margin: 1em;
 		border: 0;
 		/* How pronounced should the 3D effects be */
 			perspective: 800px;
@@ -228,13 +227,12 @@
 			}
 
 
-	.workContainer h3, .workContainer p {
-		font-size: 75%;
-		width: 50%;  
-   		word-wrap: break-word;      /* IE */
-   		position: relative;
-   		left: 30%;
-	}
+		.workContainer h3, .workContainer p {
+			font-size: 75%;
+			width: 50%;  
+	   		position: relative;
+	   		left: 30%;
+		}
 
 
 
